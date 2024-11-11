@@ -30,3 +30,79 @@ function calc() {
     mode = 'equal';
   };
 };
+
+
+// scientific calculator code
+
+function sqrt() {
+  try {
+    outScreen.value = Math.sqrt(outScreen.value);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function pow() {
+  outScreen.value += '**';
+};
+
+function sin() {
+  try {
+    outScreen.value = Math.sin(outScreen.value * Math.PI / 180);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function cos() {
+  try {
+    outScreen.value = Math.cos(outScreen.value * Math.PI / 180);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function tan() {
+  try {
+    outScreen.value = Math.tan(outScreen.value * Math.PI / 180);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function log() {
+  try {
+    outScreen.value = Math.log10(outScreen.value);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function ln() {
+  try {
+    outScreen.value = Math.log(outScreen.value);
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function fact() {
+  try {
+    let num = parseInt(outScreen.value);
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+      result *= i;
+    }
+    outScreen.value = result;
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+};
+
+function pi(){
+  try {
+    outScreen.value = outScreen.value * Math.PI;
+  } catch (err) {
+    outScreen.value = 'INVALID';
+  }
+}

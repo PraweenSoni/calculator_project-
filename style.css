@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  width: 306px;
+  width: 490px;
   padding: 20px 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
@@ -30,7 +30,7 @@ body {
 .output {
   border: solid 2px var(--main-color);
   height: 60px;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -45,20 +45,36 @@ body {
   padding-right: 20px;
   color: var(--main-color);
 }
+
+/* Hide increment (up) and decrement (down) buttons*/
+input[type="number"] {
+  appearance: textfield;      /* Standard property */
+  -webkit-appearance: none;   /* Chrome, Safari, Edge, Opera */
+  -moz-appearance: textfield; /* Firefox */
+} 
+
 #clear{
  background-color: red;
 }
 .output input::placeholder {
   color: var(--main-color);
 }
-
+.allbtns{
+  display: flex;
+}
 .btns {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   gap: 10px 15px;
 }
+.scien {
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  gap: 10px 15px;
+  margin: 0 15px;
+}
 
-.btns button {
+.btns button , .scien button{
   border: none;
   outline: none;
   height: 60px;
@@ -80,6 +96,6 @@ body {
   background-color: darkblue;
 }
 
-.btns button:hover{
+.btns button:hover, .scien button:hover{
  background-color: lightblue;
 }
