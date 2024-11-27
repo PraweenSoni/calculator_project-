@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
   background-color: whitesmoke;
 }
@@ -98,4 +99,9 @@ input[type="number"] {
 
 .btns button:hover, .scien button:hover{
  background-color: lightblue;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }
