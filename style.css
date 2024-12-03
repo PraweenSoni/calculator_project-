@@ -1,5 +1,17 @@
 :root {
   --main-color: #0d05ff;
+  --bg-color: #f8f9fa;
+  --cal-bg-color: #fff;
+  --t-color: #000000;
+  --btn-color: #f8f9fa;
+}
+
+.darktheme{
+   /* --main-color: #413bff; */
+   --bg-color: #1a1b1b;
+   --cal-bg-color: #2b3035;
+   --t-color: #fff;
+   --btn-color: #1a1a1a;
 }
 
 * {
@@ -16,16 +28,27 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-color: whitesmoke;
+  background-color: var(--bg-color);
 }
 
+header{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
+header nav div svg{
+  color: var(--t-color);
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
 .container {
   width: 490px;
   padding: 20px 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
     -5px -5px 10px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    background-color: var(--cal-bg-color);
 }
 
 .output {
@@ -81,9 +104,10 @@ input[type="number"] {
   height: 60px;
   border-radius: 50%;
   font-size: 25px;
-  color: var(--main-color);
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
+  color: var(--t-color);
+  background-color: var(--btn-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .btns button.funbtn {
@@ -98,10 +122,11 @@ input[type="number"] {
 }
 
 .btns button:hover, .scien button:hover{
- background-color: lightblue;
+ background-color: #0d05ff61;
 }
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  color: var(--t-color);
 }
